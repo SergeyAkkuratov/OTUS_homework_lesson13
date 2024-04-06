@@ -1,0 +1,73 @@
+.common {
+  overflow: auto;
+  margin: 0 auto;
+  padding: 2rem 2rem;
+}
+
+article {
+  overflow: auto;
+  margin: 0 auto;
+  padding: 2rem 2rem;
+  border: 3px solid #333333;
+  border-radius: 2% 6% 5% 4% / 1% 1% 2% 4%;
+}
+
+h1, h2, h3 {
+  text-align: center;
+}
+
+/* Chat containers */
+.container {
+  border: 2px solid #dedede;
+  background-color: #f1f1f1;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 10px 0;
+}
+
+/* Darker chat container */
+.darker {
+  border-color: #ccc;
+  background-color: #ddd;
+}
+
+.text-right {
+  text-align: right;
+}
+
+/* Clear floats */
+.container::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+/* Style time text */
+.time-right {
+  float: right;
+  color: #aaa;
+}
+
+/* Style time text */
+.time-left {
+  float: left;
+  color: #999;
+}
+
+@media (min-width: 400px) {
+	.column {
+    float: left;
+    width: 33.33%;
+  }
+  
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+/* @media (max-width: 399px) {
+	body {background-color: red;}
+} */
