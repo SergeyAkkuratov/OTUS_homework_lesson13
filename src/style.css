@@ -33,15 +33,20 @@ h3 {
   background-color: #ddd;
 }
 
-.text-right {
-  text-align: right;
-}
-
 /* Clear floats */
 .container::after {
   content: "";
   clear: both;
   display: table;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.username {
+  font-weight: 700;
+  font-size: larger;
 }
 
 /* Style time text */
