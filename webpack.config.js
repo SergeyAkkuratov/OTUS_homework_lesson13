@@ -1,11 +1,14 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
-const fs = require('fs')
+const fs = require("fs");
 
-const articles = fs.readdirSync('./src/articles').map(name => new HtmlWebpackPlugin({
-  template: `./src/articles/${name}`,
-  filename: `articles/${name}`
-}));
+const articles = fs.readdirSync("./src/articles").map(
+  (name) =>
+    new HtmlWebpackPlugin({
+      template: `./src/articles/${name}`,
+      filename: `articles/${name}`,
+    }),
+);
 
 module.exports = {
   entry: "./src/index.js",

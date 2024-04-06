@@ -12,7 +12,9 @@ article {
   border-radius: 2% 6% 5% 4% / 1% 1% 2% 4%;
 }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
   text-align: center;
 }
 
@@ -55,11 +57,11 @@ h1, h2, h3 {
 }
 
 @media (min-width: 400px) {
-	.column {
+  .column {
     float: left;
     width: 33.33%;
   }
-  
+
   /* Clear floats after the columns */
   .row:after {
     content: "";
