@@ -1,6 +1,6 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
-const { globSync } = require('glob')
+const { globSync } = require("glob");
 
 const htmlTemplates = globSync("./src/**/*.html").map(
   (htmlPath) =>
