@@ -1,12 +1,12 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
-const fs = require("fs");
+const { globSync } = require('glob')
 
-const articles = fs.readdirSync("./src/articles").map(
-  (name) =>
+const htmlTemplates = globSync("./src/**/*.html").map(
+  (htmlPath) =>
     new HtmlWebpackPlugin({
-      template: `./src/articles/${name}`,
-      filename: `articles/${name}`,
+      template: `${htmlPath}`,
+      filename: `${htmlPath.replace("src\\", "")}`,
     }),
 );
 
@@ -18,16 +18,7 @@ module.exports = {
     path: path.resolve(__dirname, "dist"),
     clean: true,
   },
-  plugins: [
-    new HtmlWebpackPlugin({
-      template: "./src/index.html",
-      filename: "./index.html",
-    }),
-    new HtmlWebpackPlugin({
-      template: "./src/chat.html",
-      filename: "./chat.html",
-    }),
-  ].concat(articles),
+  plugins: [...htmlTemplates],
   module: {
     rules: [
       {
